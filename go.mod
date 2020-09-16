@@ -1,4 +1,4 @@
-module secretsfrompass
+module github.com/bellaweo/kustomize-pass
 
 go 1.14
 

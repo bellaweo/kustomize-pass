@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# mocked pass binary used for tests
+
+if [[ $1 == "katt_test" ]]; then
+  echo "katt_test"
+  echo "├── ROCKET"
+  echo "└── VEGETABLE"
+fi
+
+if [[ $1 == "katt_test/ROCKET" ]]; then
+  echo "poop"
+fi
+
+if [[ $1 == "katt_test/VEGETABLE" ]]; then
+  echo "blah"
+fi

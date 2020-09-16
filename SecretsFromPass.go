@@ -32,11 +32,11 @@ var KustomizePlugin plugin
 func (p *plugin) passParse() (map[string]string, error) {
 	var pass = make(map[string]string)
 
-	var out bytes.Buffer
 	path, err := exec.LookPath("pass")
 	if err != nil {
 		return nil, err
 	}
+	var out bytes.Buffer
 	cmd := exec.Command(path, p.PassDir)
 	cmd.Stdout = &out
 	err = cmd.Run()

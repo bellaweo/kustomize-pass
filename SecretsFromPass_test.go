@@ -4,12 +4,18 @@
 package main_test
 
 import (
+	"os"
 	"testing"
 
 	kusttest_test "sigs.k8s.io/kustomize/api/testutils/kusttest"
 )
 
 func TestSecretsFromPassPlugin(t *testing.T) {
+
+	path := os.Getenv("PATH")
+	dir, _ := os.Getwd()
+	os.Setenv("PATH", dir+":"+path)
+
 	th := kusttest_test.MakeEnhancedHarness(t)
 	defer th.Reset()
 
